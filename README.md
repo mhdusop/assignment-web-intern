@@ -1,7 +1,77 @@
-# Vue 3 + Vite
+# Frontend Project Setup Guide
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Setup
 
-## Recommended IDE Setup
+### Installation
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/mhdusop/assignment-web-intern-fe
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd assignment-web-intern-fe
+    ```
+
+3. **Install dependencies using npm or yarn:**
+
+    ```bash
+    npm install
+    ```
+    or using yarn
+    ```bash
+    yarn install
+    ```
+
+4. **Run the server:**
+
+    ```bash
+    npm run dev
+    ```
+
+## Vue Router Configuration
+
+In this project, Vue Router is used for routing. Here's a brief description of the routes:
+
+### Routes
+
+- **Home:** 
+    - **Path:** `/`
+    - **Name:** `home`
+    - **Component:** `views/user/index.vue`
+    - **Description:** This is the default route for the homepage.
+
+- **User Index:** 
+    - **Path:** `/user`
+    - **Name:** `user.index`
+    - **Component:** `views/user/index.vue`
+    - **Description:** Displays a list of users.
+
+- **Create User:** 
+    - **Path:** `/user/create`
+    - **Name:** `user.create`
+    - **Component:** `views/user/create.vue`
+    - **Description:** Form for creating a new user.
+
+- **Edit User:** 
+    - **Path:** `/user/edit/:id`
+    - **Name:** `user.edit`
+    - **Component:** `views/user/edit.vue`
+    - **Description:** Form for editing an existing user. The `:id` parameter is used to identify the user to be edited.
+
+- **User Detail:** 
+    - **Path:** `/user/detail/:id`
+    - **Name:** `user.detail`
+    - **Component:** `views/user/detail.vue`
+    - **Description:** Displays detailed information about a specific user. The `:id` parameter is used to identify the user.
+
+- **Not Found Page:** 
+    - **Path:** `/:catchAll(.*)`
+    - **Name:** `pages.not-found`
+    - **Component:** `pages/notFoundPage.vue`
+    - **Description:** Default route for handling 404 errors.
+
+This configuration ensures proper navigation within the frontend application.
